@@ -1,0 +1,13 @@
+<h1>Log in</h1>
+
+<%= form_tag sessions_path do %>
+	<p>
+		<%= f.label :email %> <br/>
+		<%= f.text_field :email, params[:email] %>
+	</p>
+	<p>
+		<%= f.label :password %> <br/>
+		<%= f.password_field :password %>
+	</p>
+	<p class="button"><%= submit_tag %></p>
+<% end %>

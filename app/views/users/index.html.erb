@@ -1,0 +1,11 @@
+<h1>Welcome to Shouter.</h1>
+<% @users.each do |u| %>
+	<p><%= link_to u.username.capitalize, u %>: <%= u.fname %></p>
+	<% if u.shouts.last.present? %>
+		<p><%= u.shouts.last.status %></p>
+	<% else %>
+		<p><%= u.username.capitalize %> has not shouted yet.</p>
+	<% end %>
+<% end %>
+
+<%= link_to 'Sign Up', sign_up_path %>

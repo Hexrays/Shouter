@@ -1,0 +1,10 @@
+<h1>Welcome to Shouter.</h1>
+
+<% @shout.each do |s| %>
+	<div class="shout">
+		<p><strong><%= s.user.fname %>:</strong></p>
+		<p><%= s.status %></p>
+	</div>
+<% end %>
+
+<%= link_to 'New Shout', new_shout_path %>

@@ -1,0 +1,11 @@
+<%= form_for @shout, :url => { :action => "create" } do |f| %>
+	<div class="field">
+		<%= f.label :status %><br>
+	  <%= f.text_area :status, :size => "40x3" %><br>
+  	<%= f.label :user_id %>: 
+	  <%= f.select :user_id, options_from_collection_for_select(User.order("last_name"), 'id', 'fname') %>
+  </div>
+  <div class="actions">
+	  <%= f.submit "Shout!" %>
+  </div>
+<% end %>

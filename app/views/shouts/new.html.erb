@@ -1,0 +1,10 @@
+<h1>New Shout</h1>
+
+<%= render 'form' %>
+
+<% @all_shouts.each do |s| %>
+	<div class="shout">
+		<p><strong><%= s.user.fname %>:</strong></p>
+		<p><%= s.status %></p>
+	</div>
+<% end %>

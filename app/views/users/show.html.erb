@@ -1,0 +1,20 @@
+<% if current_user %>
+<div id="createShout" class="shoutHere">
+	<h1>Shout!</h1>
+	<p>
+		<%= form_for @shout do |f| %>
+			<%= f.text_area :status, :size => "10x5" %> <br/>
+			<%= f.submit "Shout!" %>
+		<% end %>
+	</p>
+</div>
+<% end %>
+
+<div class="shouts">
+	<h1><%= @user.username.capitalize %>'s Shouts!</h1>
+	<div class="shoutWrapper">
+		<% @user.shouts.each do |s| %>
+			<p><strong>@<%= @user.username.capitalize %></strong> <em>(<%= time_ago_in_words(s.created_at) %>)</em>  <%= s.status %></p>
+		<% end %>
+	</div>
+</div>

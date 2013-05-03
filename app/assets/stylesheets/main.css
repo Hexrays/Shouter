@@ -10,3 +10,7 @@ body {
 	border-radius: 15px;
 	box-shadow: 15px 15px 15px DarkOliveGreen;
 }
+
+textarea#shout_status {
+	min-width: 98%;
+}

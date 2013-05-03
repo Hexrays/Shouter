@@ -5,6 +5,7 @@ class UsersController < ApplicationController
 	
 	  def show
 	  	@user = User.find(params[:id])
+	  	@shout = Shout.new
 	  end
 	
 	  def new
